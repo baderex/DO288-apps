@@ -1,10 +1,10 @@
 # Use the httpd-parent image as base
 FROM quay.io/redhattraining/httpd-parent
 EXPOSE 8080
-LABEL io.k8s.description="A basic Apche HTTP server " \
-      io.k8s.display-name = "Apache HTTP server" \
-      io.openshift.expose-services="8080:http" \
-      io.openshift.tage="apache,httpd"
+#LABEL io.k8s.description="A basic Apche HTTP server " \
+#      io.k8s.display-name = "Apache HTTP server" \
+#      io.openshift.expose-services="8080:http" \
+#     io.openshift.tage="apache,httpd"
 
 RUN sed -i "s/Listen 80/Listen 808/g" /etc/httpd/conf/httpd.conf
 
